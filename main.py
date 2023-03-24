@@ -33,7 +33,7 @@ def detect(origin, cascade_path):
 
         # white = cv2.rectangle(white, (x, y), (x + w, y + h), (0, 0, 0), -1)
         # draw a circle on the white image where the face is
-        white = cv2.circle(white, (x + w // 2, y + h // 2), wd, (0, 0, 0), -1)
+        white = cv2.circle(white, (x + w // 2, y + h // 2), w + wd, (0, 0, 0), -1)
 
     white = cv2.cvtColor(white, cv2.COLOR_BGR2GRAY)
     return white
@@ -114,7 +114,7 @@ def get_face_mean_mask(image, face):
 if __name__ == '__main__':
     print("START")
     # detect("Test8.png", HAAR_CASCADE_PATH)
-    image = cv2.imread("Test8.png")
+    image = cv2.imread("Test9.png")
     # resize image to 512x512
     image = cv2.resize(image, (512, 512))
     cv2.imshow("ORIGIN", image)

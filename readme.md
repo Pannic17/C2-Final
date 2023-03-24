@@ -1,5 +1,11 @@
-## Introduction
+# Ai, Art & hAsh
+The generative art of computer's understanding, memory and validation of your picture
+### Jiangyun Pan
 
+https://github.com/Pannic17/C2-Final  
+https://ual.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f7dc3064-e57d-4829-be64-afcf011a8f09  
+
+## Introduction
 For this project, I created a Python script that uses a Stable Diffusion model to generate an image based on a hash string. I then used the generated image to cast a face in an input image. The script uses OpenCV to detect faces in an input image, and then uses a binary mask to replace the face with the generated image. The script also uses OpenCV to compute the perceptual hash of an input image.  
 
 ### Course Content
@@ -50,6 +56,7 @@ One can also add peom to the input text to make the result more interesting.
 - The program can intake any picture with/witout face, but the result is not guaranteed to be good.
 - Please use a square image as input, and the output image will always be a 512x512 image.
 - If you wish, please use `cv2.imwrite` to save the output image.
+- As `keras_cv` only supports `tensorflow 2.11.0+`, GPU is not supported on native windows. So, the generation of image may few minutes depends on CPU performance. However, on a Mac M1 device (10-core CPU, 14-core GPU), the process only takes 2 minutes.
 
 ## Functions
 
